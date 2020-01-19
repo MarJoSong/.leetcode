@@ -43,11 +43,12 @@ bool isPalindrome(int x){
     }
 
     int a = 0;
+    //只需要比较一半的数字
     while(x > a){
         a = a * 10 + x%10;
         x /= 10;
     }
-
+    // 12 == 123 || 12 == 123/10
     return a == x || x == a/10;
 }
 
