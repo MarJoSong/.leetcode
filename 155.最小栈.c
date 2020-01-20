@@ -42,7 +42,7 @@ void minStackPush(MinStack *obj, int x)
 		{
 				int **content = (int **)malloc(sizeof(int *) * 2 * obj->size);
 				memset(content, 0, sizeof(int *) * 2 * obj->size);
-				memcpy(content, obj->content, sizeof(int *) * obj->length - 1);
+				memcpy(content, obj->content, sizeof(int *) * (obj->length - 1));
 				safe_free(obj->content);
 				obj->content = content;
 				obj->size = obj->size * 2;
